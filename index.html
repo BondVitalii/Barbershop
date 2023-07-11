@@ -8,12 +8,14 @@
       content="We are experts in trendy men's haircuts. We work quickly, carefully and with style."
     />
     <title>BarberShop</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
-    <header>
-      <a href="">
+    <header class="header">
+      <a class="header-logo link" href="./index.html">
         <img
+          class="header-logo-img"
           src="./images/header/logo.svg"
           alt="BarberShop logo"
           width="70"
@@ -21,42 +23,46 @@
         />
       </a>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="">About</a>
+      <nav class="header-nav">
+        <ul class="header-list list">
+          <li class="header-item">
+            <a class="header-link link" href="#about">About</a>
           </li>
-          <li>
-            <a href="">Services and prices</a>
+          <li class="header-item">
+            <a class="header-link link" href="#price">Services and prices</a>
           </li>
-          <li>
-            <a href="">Barbers</a>
+          <li class="header-item">
+            <a class="header-link link" href="#team">Barbers</a>
           </li>
-          <li>
-            <a href="">Contacts</a>
+          <li class="header-item">
+            <a class="header-link link" href="#contact">Contacts</a>
           </li>
         </ul>
       </nav>
 
-      <a href="tel:+380441111111">+38 044 111 11 11</a>
+      <a class="header-contact link" href="tel:+380441111111"
+        >+38 044 111 11 11</a
+      >
 
-      <button type="button">Online-booking</button>
+      <button class="header-button" type="button">Online-booking</button>
     </header>
 
     <main>
       <!-- Hero section -->
-      <section>
-        <ul>
-          <li>
+      <section class="hero section">
+        <ul class="hero-list">
+          <li class="hero-item">
             <a
+              class="hero-link link"
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               >Instagram</a
             >
           </li>
-          <li>
+          <li class="hero-item">
             <a
+              class="hero-link link"
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -65,32 +71,32 @@
           </li>
         </ul>
 
-        <p>A hair salon for men in Kyiv</p>
-        <h1>BarberShop</h1>
-        <p>
+        <p class="hero-uppertitle">A hair salon for men in Kyiv</p>
+        <h1 class="hero-title">BarberShop</h1>
+        <p class="hero-description">
           We are experts in trendy men's haircuts. We work quickly, carefully
           and with style.
         </p>
 
         <!-- slider pagination -->
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+        <ul class="slider-pagination">
+          <li class="slider-pagination-item"></li>
+          <li class="slider-pagination-item"></li>
+          <li class="slider-pagination-item"></li>
         </ul>
         <!-- slider controls -->
-        <ul>
-          <li>
-            <button type="button">Back</button>
+        <ul class="slider-controls">
+          <li class="slider-controls-item">
+            <button class="slider-controls-btn" type="button">Back</button>
           </li>
-          <li>
-            <button type="button">Forward</button>
+          <li class="slider-controls-item">
+            <button class="slider-controls-btn" type="button">Forward</button>
           </li>
         </ul>
       </section>
 
       <!-- About us section -->
-      <section>
+      <section id="about">
         <p>About</p>
         <h2>Best Barbershop in your city</h2>
         <p>
@@ -126,7 +132,7 @@
       </section>
 
       <!-- Price section -->
-      <section>
+      <section id="price">
         <p>Spend your time with the best masters</p>
         <h2>Services and prices</h2>
         <div>
@@ -177,7 +183,7 @@
       </section>
 
       <!-- Team section -->
-      <section>
+      <section id="team">
         <p>For true enjoyers of the atmosphere</p>
         <h2>Our barbers</h2>
 
@@ -389,7 +395,7 @@
       </section>
 
       <!-- Contact section -->
-      <section>
+      <section id="contact">
         <h2>Contacts</h2>
         <address>
           <ul>
