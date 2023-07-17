@@ -3,12 +3,12 @@
   --primary-fonts: Open Sans, sans-serif;
   --secondary-fonts: Raleway, sans-serif;
   /* Text colors */
-  --primary-txt-cl: #303030; /* заголоcla H2 */
+  --primary-txt-cl: #303030;
   --light-txt-cl: #ffffff;
-  --grey-cl: #555555; /* заголовок */
+  --grey-cl: #555555;
   --grey-txt-cl: #9da4bd;
   --grey-color-60: rgba(157, 164, 189, 0.6);
-  --accent-txt-cl: #ff6c00; /* заголовок */
+  --accent-txt-cl: #ff6c00;
   /* BG colors */
   --primary-bg-cl: #191c26;
   --secondary-bg-cl: #111319;
@@ -62,12 +62,19 @@ body {
 .subtitle {
   color: var(--grey-cl);
 }
-/* button */
-.btn {
-  font-family: inherit;
+.description {
+  font-size: 14px;
+  line-height: calc(26 / 14); /* 185.714% */
+  letter-spacing: 0.28px;
+}
+.txt {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.2; /* normal */
+}
+/* button */
+.btn {
+  font-family: inherit;
   letter-spacing: 1.08px;
   text-transform: uppercase;
   color: var(--primary-txt-cl);
@@ -78,6 +85,6 @@ body {
 .btn:focus {
   background-color: var(--accent-bg-cl);
 }
-.btn-theme-dark {
+.btn-dark {
   color: var(--light-txt-cl);
 }
