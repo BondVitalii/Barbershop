@@ -1,0 +1,83 @@
+:root {
+  /* Fonts */
+  --primary-fonts: Open Sans, sans-serif;
+  --secondary-fonts: Raleway, sans-serif;
+  /* Text colors */
+  --primary-txt-cl: #303030; /* заголоcla H2 */
+  --light-txt-cl: #ffffff;
+  --grey-cl: #555555; /* заголовок */
+  --grey-txt-cl: #9da4bd;
+  --grey-color-60: rgba(157, 164, 189, 0.6);
+  --accent-txt-cl: #ff6c00; /* заголовок */
+  /* BG colors */
+  --primary-bg-cl: #191c26;
+  --secondary-bg-cl: #111319;
+  --accent-bg-cl: #ff6c00;
+  /* Others */
+}
+/*__________ Reset style __________*/
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+.list {
+  list-style: none;
+}
+/*__________ Basic style __________*/
+body {
+  font-family: var(--primary-fonts);
+  font-size: 18px;
+  font-style: normal;
+  line-height: calc(30 / 18); /* 166.667% */
+  letter-spacing: 0.36px;
+  color: var(--grey-cl);
+}
+.media-link {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2; /* normal */
+  letter-spacing: 2.2px;
+  color: var(--primary-txt-cl);
+}
+.uppertitle {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2; /* normal */
+  text-transform: uppercase;
+  color: var(--primary-txt-cl);
+}
+.uppertitle-grey {
+  color: var(--grey-color-60);
+}
+.title {
+  font-family: var(--secondary-fonts);
+  font-size: 42px;
+  line-height: 1.2; /* normal */
+  letter-spacing: 2.1px;
+  color: var(--primary-txt-cl);
+}
+.title-white {
+  color: var(--light-txt-cl);
+}
+.subtitle {
+  color: var(--grey-cl);
+}
+/* button */
+.btn {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2; /* normal */
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  color: var(--primary-txt-cl);
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-bg-cl);
+}
+.btn-theme-dark {
+  color: var(--light-txt-cl);
+}
