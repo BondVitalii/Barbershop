@@ -1,60 +1,101 @@
-body {
-  background-color: aquamarine;
-}
-
 /*__________ Header section __________*/
 .header {
+  background-color: var(--grey-color-60);
 }
-.header-logo {
-}
-.link {
-}
-.header-logo-img {
-}
-.header-nav {
-}
-.header-list {
-}
-.list {
-}
-.header-item {
-}
-.header-link {
-}
+.header-link,
 .header-contact {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2; /* normal */
+  letter-spacing: 1.2px;
+  color: var(--light-txt-cl);
 }
-.header-button {
-}
-.header-button:hover,
-.header-button:focus {
+.header-link:hover,
+.header-link:focus,
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--accent-txt-cl);
 }
 /*__________ Hero section __________*/
 .hero {
+  background-color: var(--primary-bg-cl);
 }
-.section {
-}
-.hero-list {
-}
-.hero-item {
-}
-.hero-link {
-}
-.link {
-}
-.hero-uppertitle {
+.hero .media-link:hover,
+.hero .media-link:focus {
+  color: var(--accent-txt-cl);
 }
 .hero-title {
+  font-family: var(--secondary-fonts);
+  font-size: 72px;
+  line-height: 1.2; /* normal */
+  letter-spacing: 3.6px;
+  color: var(--light-txt-cl);
 }
 .hero-description {
+  color: var(--grey-txt-cl);
 }
 /* slider */
-.slider-pagination {
+/*__________ About section __________*/
+.about-description {
+  font-size: 14px;
+  line-height: calc(26 / 14); /* 185.714% */
+  letter-spacing: 0.28px;
 }
-.slider-pagination-item {
+/*__________ Service section __________*/
+.service {
+  background-color: var(--secondary-bg-cl);
 }
-.slider-controls {
+.service-item {
+  color: var(--grey-txt-cl);
 }
-.slider-controls-item {
+/*__________ Benefits section __________*/
+.title.counter {
+  text-align: center;
+  font-family: var(--primary-fonts);
 }
-.slider-controls-btn {
+.benefits-decor {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2; /* normal */
+  color: var(--accent-txt-cl);
+}
+.uppertitle.benefits-txt {
+  text-align: center;
+  text-transform: none;
+}
+/*__________ Team section __________*/
+.team-name {
+  color: var(--primary-txt-cl);
+}
+.team-post {
+  font-size: 14px;
+  line-height: 1.2; /* normal */
+  letter-spacing: 0.28px;
+  color: var(--accent-txt-cl);
+}
+/*__________ Gallary section __________*/
+/*__________ Booking section __________*/
+.booking {
+  background-color: var(--primary-bg-cl);
+}
+/*__________ Contact section __________*/
+.contact-section {
+  background-color: var(--primary-bg-cl);
+}
+.contact-block,
+.mail-link,
+.schedule-description {
+  font-style: normal;
+  color: var(--grey-txt-cl);
+}
+.location-link {
+  font-weight: 700;
+}
+.schedule-uppertitle {
+  color: var(--light-txt-cl);
+}
+/*__________ Footer section __________*/
+.media-link.footer-desc {
+  color: var(--grey-txt-cl);
 }
