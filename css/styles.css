@@ -22,58 +22,106 @@
   color: var(--accent-txt-cl);
 }
 .hero-title {
+  margin-bottom: 20px;
   font-family: var(--secondary-fonts);
   font-size: 72px;
-  line-height: 1.2; /* normal */
+  line-height: normal; /* normal */
   letter-spacing: 3.6px;
   color: var(--light-txt-cl);
 }
 .hero-description {
+  width: 360px;
   color: var(--grey-txt-cl);
 }
 /* slider */
 /*__________ About section __________*/
+.about-right-side {
+  width: 470px;
+}
 /*__________ Service section __________*/
 .service {
   background-color: var(--secondary-bg-cl);
+}
+.service .title,
+.team .title,
+.price-wrapper,
+.gallery .uppertitle,
+.booking .title {
+  margin-bottom: 44px;
 }
 .service-item {
   color: var(--grey-txt-cl);
 }
 /*__________ Benefits section __________*/
 .title.counter {
+  margin-bottom: 6px;
   text-align: center;
   font-family: var(--primary-fonts);
+  text-align: center;
+  font-weight: 700;
 }
 .benefits-decor {
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-  line-height: 1.2; /* normal */
+  line-height: normal; /* normal */
   color: var(--accent-txt-cl);
 }
-.uppertitle.benefits-txt {
+.benefits .uppertitle {
   text-align: center;
   text-transform: none;
 }
+.benefits-right-side {
+  width: 500px;
+}
+.uppertitle-desc {
+  margin: 0;
+}
 /*__________ Team section __________*/
+.team.section {
+  background-color: var(--light-gray-bg-cl);
+}
+.team-item {
+  width: 370px;
+}
+.team-wrapper {
+  padding-top: 30px;
+  text-align: center;
+}
 .team-name {
+  margin-bottom: 8px;
   color: var(--primary-txt-cl);
 }
 .team-post {
-  line-height: 1.2; /* normal */
+  margin-bottom: 30px;
+  line-height: normal; /* normal */
   color: var(--accent-txt-cl);
 }
 /*__________ Gallary section __________*/
 /*__________ Booking section __________*/
+.booking.section {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
 .booking {
   background-color: var(--primary-bg-cl);
 }
 /*__________ Contact section __________*/
-.contact-section {
+.contact.section {
+  padding-top: 130px;
+  padding-bottom: 183px;
+}
+.contact {
   background-color: var(--primary-bg-cl);
 }
-.contact-block,
+.contact .title {
+  margin-bottom: 40px;
+}
+.contact-block {
+  margin-bottom: 70px;
+  font-style: normal;
+  color: var(--grey-txt-cl);
+}
 .mail-link,
 .schedule-description {
   font-style: normal;
@@ -82,10 +130,18 @@
 .location-link {
   font-weight: 700;
 }
+.contact-item,
+.contact .uppertitle {
+  margin-bottom: 20px;
+}
 .schedule-uppertitle {
   color: var(--light-txt-cl);
 }
 /*__________ Footer section __________*/
+.footer.section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
 .media-link.footer-desc {
   color: var(--grey-txt-cl);
 }
