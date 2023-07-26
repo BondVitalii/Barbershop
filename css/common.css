@@ -12,10 +12,28 @@
   /* BG colors */
   --primary-bg-cl: #191c26;
   --secondary-bg-cl: #111319;
+  --light-bg-cl: #ffffff;
+  --light-gray-bg-cl: #f7f7f7;
   --accent-bg-cl: #ff6c00;
   /* Others */
+  --radius: 25px;
 }
-/*__________ Reset style __________*/
+/*__________ Reset styles __________*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
 .link {
   text-decoration: none;
   color: currentColor;
@@ -23,7 +41,7 @@
 .list {
   list-style: none;
 }
-/*__________ Basic style __________*/
+/*__________ Common styles __________*/
 body {
   font-family: var(--primary-fonts);
   font-size: 18px;
@@ -32,17 +50,34 @@ body {
   letter-spacing: 0.36px;
   color: var(--grey-cl);
 }
+/*__________ Basic styles __________*/
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: var(--light-bg-cl);
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  outline: 1px solid Red;
+}
 .media-link {
   font-size: 11px;
   font-weight: 600;
-  line-height: 1.2; /* normal */
+  line-height: normal; /* normal */
   letter-spacing: 2.2px;
   color: var(--primary-txt-cl);
 }
 .uppertitle {
+  margin-bottom: 20px;
+
   font-size: 11px;
   font-weight: 600;
-  line-height: 1.2; /* normal */
+  line-height: normal; /* normal */
   text-transform: uppercase;
   color: var(--primary-txt-cl);
 }
@@ -50,19 +85,26 @@ body {
   color: var(--grey-color-60);
 }
 .title {
+  margin-bottom: 20px;
   font-family: var(--secondary-fonts);
   font-size: 42px;
-  line-height: 1.2; /* normal */
+  line-height: normal; /* normal */
   letter-spacing: 2.1px;
   color: var(--primary-txt-cl);
 }
 .title-white {
   color: var(--light-txt-cl);
 }
+/* Hidden-title */
+.hidden-title {
+  display: none;
+}
 .subtitle {
+  margin-bottom: 20px;
   color: var(--grey-cl);
 }
 .description {
+  margin-bottom: 42px;
   font-size: 14px;
   line-height: calc(26 / 14); /* 185.714% */
   letter-spacing: 0.28px;
@@ -70,13 +112,24 @@ body {
 .txt {
   font-size: 12px;
   font-weight: 600;
-  line-height: 1.2; /* normal */
+  line-height: normal; /* normal */
 }
 /* button */
 .btn {
+  min-width: 160px;
+  min-height: 40px;
+  padding: 12px 20px;
+
+  border-radius: var(--radius);
+  border: 1px solid var(--accent-bg-cl);
+
   font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: normal; /* normal */
   letter-spacing: 1.08px;
   text-transform: uppercase;
+
   color: var(--primary-txt-cl);
   background-color: transparent;
   cursor: pointer;
