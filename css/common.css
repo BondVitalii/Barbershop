@@ -15,8 +15,11 @@
   --light-bg-cl: #ffffff;
   --light-gray-bg-cl: #f7f7f7;
   --accent-bg-cl: #ff6c00;
+  --grey-color-12: rgba(157, 164, 189, 0.12);
   /* Others */
   --radius: 25px;
+  --indent: 30px;
+  --items: 3;
 }
 /*__________ Reset styles __________*/
 h1,
@@ -33,6 +36,8 @@ li {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .link {
   text-decoration: none;
@@ -140,4 +145,13 @@ body {
 }
 .btn-dark {
   color: var(--light-txt-cl);
+}
+/* Card-set */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * var(--items) - 1)) / var(--items);
 }

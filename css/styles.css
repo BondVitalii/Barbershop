@@ -1,9 +1,32 @@
 /*__________ Header section __________*/
 .header {
+  padding-top: 32px;
+  padding-bottom: 32px;
   background-color: var(--grey-color-60);
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  margin-right: 130px;
+}
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header-nav {
+  margin-right: auto;
+}
+.header-contact {
+  margin-right: 40px;
 }
 .header-link,
 .header-contact {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
   letter-spacing: 1.2px;
   color: var(--light-txt-cl);
 }
@@ -35,6 +58,14 @@
 }
 /* slider */
 /*__________ About section __________*/
+.about-container {
+  display: flex;
+}
+.about-list {
+  display: flex;
+  gap: 30px;
+  margin-right: 30px;
+}
 .about-right-side {
   width: 470px;
 }
@@ -49,8 +80,33 @@
 .booking .title {
   margin-bottom: 44px;
 }
+.price-wrapper {
+  display: flex;
+  gap: 30px;
+}
+.price-list {
+  width: 570px;
+  padding: 30px 20px;
+}
 .service-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
   color: var(--grey-txt-cl);
+}
+.service-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.price-line {
+  display: block;
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--grey-color-12);
+}
+.price-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*__________ Benefits section __________*/
 .title.counter {
@@ -98,6 +154,9 @@
   color: var(--accent-txt-cl);
 }
 /*__________ Gallary section __________*/
+.gallery-list {
+  --items: 4;
+}
 /*__________ Booking section __________*/
 .booking.section {
   padding-top: 130px;
