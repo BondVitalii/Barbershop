@@ -22,11 +22,27 @@
 .header-contact {
   margin-right: 40px;
 }
+.header-link::after {
+  content: '';
+
+  position: absolute;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+
+  background-color: var(--accent-txt-cl);
+}
 .header-link,
 .header-contact {
+  position: relative;
+
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
+
   letter-spacing: 1.2px;
   color: var(--light-txt-cl);
 }
@@ -71,22 +87,43 @@
 }
 /*__________ Service section __________*/
 .service {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--secondary-bg-cl);
-}
-.service .title,
-.team .title,
-.price-wrapper,
-.gallery .uppertitle,
-.booking .title {
-  margin-bottom: 44px;
+  background-image: url(../images/price/price-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .price-wrapper {
   display: flex;
   gap: 30px;
+  margin-bottom: 44px;
+}
+.service .title,
+.team .title,
+.gallery .uppertitle,
+.booking .title {
+  margin-bottom: 44px;
 }
 .price-list {
   width: 570px;
   padding: 30px 20px;
+}
+.price-list:first-child {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+.price-list:last-child {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
 }
 .service-item {
   display: flex;
@@ -109,6 +146,14 @@
   margin-right: auto;
 }
 /*__________ Benefits section __________*/
+.benefits-item {
+  width: 170px;
+  min-height: 133px;
+  margin-bottom: 30px;
+  padding: 20px 24px;
+  background-color: var(--light-gray-bg-cl);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
 .title.counter {
   margin-bottom: 6px;
   text-align: center;
@@ -123,15 +168,15 @@
   line-height: normal; /* normal */
   color: var(--accent-txt-cl);
 }
-.benefits .uppertitle {
+.benefits-description {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: normal; /* normal */
   text-align: center;
-  text-transform: none;
+  color: var(--primary-txt-cl);
 }
 .benefits-right-side {
   width: 500px;
-}
-.uppertitle-desc {
-  margin: 0;
 }
 /*__________ Team section __________*/
 .team.section {
@@ -153,25 +198,43 @@
   line-height: normal; /* normal */
   color: var(--accent-txt-cl);
 }
+.team-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /*__________ Gallary section __________*/
 .gallery-list {
   --items: 4;
 }
-/*__________ Booking section __________*/
-.booking.section {
-  padding-top: 130px;
-  padding-bottom: 120px;
-}
-.booking {
+/*__________ Booking and Contact section __________ */
+.wrapper {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
   background-color: var(--primary-bg-cl);
+  background-image: url(../images/contact/contact-img.png);
+  background-repeat: no-repeat;
+  background-position: top 50% left calc(50% + 408px);
 }
-/*__________ Contact section __________*/
-.contact.section {
+.wrapper-container {
+  display: flex;
+  gap: 30px;
+}
+.booking,
+.contact {
+  width: 570px;
+}
+/* Booking section */
+.booking.section {
   padding-top: 130px;
   padding-bottom: 183px;
 }
-.contact {
-  background-color: var(--primary-bg-cl);
+/* Contact section */
+.contact.section {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  padding-left: 100px;
 }
 .contact .title {
   margin-bottom: 40px;
@@ -189,17 +252,38 @@
 .location-link {
   font-weight: 700;
 }
-.contact-item,
-.contact .uppertitle {
+.contact-item:not(:last-child) {
   margin-bottom: 20px;
 }
 .schedule-uppertitle {
+  margin-bottom: 20px;
   color: var(--light-txt-cl);
+}
+.schedule-uppertitle::before {
+  background-color: var(--grey-color-40);
 }
 /*__________ Footer section __________*/
 .footer.section {
   padding-top: 56px;
   padding-bottom: 56px;
+}
+.footer-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-list,
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.footer-item:first-child::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--primary-txt-cl);
 }
 .media-link.footer-desc {
   color: var(--grey-txt-cl);
