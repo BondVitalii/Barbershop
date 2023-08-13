@@ -179,6 +179,15 @@
   width: 500px;
 }
 /*__________ Team section __________*/
+.team {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--light-gray-bg-cl);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .team.section {
   background-color: var(--light-gray-bg-cl);
 }
