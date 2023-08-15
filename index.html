@@ -29,6 +29,7 @@
   </head>
   <body>
     <!-- Header section -->
+
     <header class="header">
       <div class="header-conteiner container">
         <a class="header-logo link" href="./index.html">
@@ -64,53 +65,62 @@
         <button class="txt btn btn-dark" type="button">Online-booking</button>
       </div>
     </header>
+
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                class="media-link link"
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                class="media-link link"
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+        <div class="hero-container container">
+          <div class="hero-left-side">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  class="media-link link"
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  class="media-link link"
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
 
-          <p class="uppertitle uppertitle-grey">A hair salon for men in Kyiv</p>
-          <h1 class="hero-title">BarberShop</h1>
-          <p class="hero-description">
-            We are experts in trendy men's haircuts. We work quickly, carefully
-            and with style.
-          </p>
+          <div class="hero-right-side">
+            <p class="uppertitle uppertitle-grey">
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="hero-title">BarberShop</h1>
+            <p class="hero-description">
+              We are experts in trendy men's haircuts. We work quickly,
+              carefully and with style.
+            </p>
 
-          <!-- slider pagination -->
-          <ul class="slider-pagination list" hidden>
-            <li class="slider-pagination-item"></li>
-            <li class="slider-pagination-item"></li>
-            <li class="slider-pagination-item"></li>
-          </ul>
-          <!-- slider controls -->
-          <ul class="slider-controls list" hidden>
-            <li class="slider-controls-item">
-              <button class="slider-controls-btn" type="button">Back</button>
-            </li>
-            <li class="slider-controls-item">
-              <button class="slider-controls-btn" type="button">Forward</button>
-            </li>
-          </ul>
+            <!-- slider pagination -->
+            <ul class="slider-pagination list" hidden>
+              <li class="slider-pagination-item"></li>
+              <li class="slider-pagination-item"></li>
+              <li class="slider-pagination-item"></li>
+            </ul>
+            <!-- slider controls -->
+            <ul class="slider-controls list" hidden>
+              <li class="slider-controls-item">
+                <button class="slider-controls-btn" type="button">Back</button>
+              </li>
+              <li class="slider-controls-item">
+                <button class="slider-controls-btn" type="button">
+                  Forward
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -204,37 +214,31 @@
 
       <!-- Benefits section -->
       <section class="benefits section">
-        <div class="container">
-          <ul class="list">
-            <li class="benefits-item">
-              <p class="title counter">
-                600<sup class="benefits-decor">&#43;</sup>
-              </p>
-              <p class="benefits-description">Satisfied customers per day</p>
-            </li>
-            <li class="benefits-item">
-              <p class="title counter">
-                50<sup class="benefits-decor">&#43;</sup>
-              </p>
-              <p class="benefits-description">Awards for excellent service</p>
-            </li>
-            <li class="benefits-item">
-              <p class="title counter">
-                20<sup class="benefits-decor">&#43;</sup>
-              </p>
-              <p class="benefits-description">Kyiv's best barbers</p>
-            </li>
-            <li class="benefits-item">
-              <p class="title counter">
-                100<sup class="benefits-decor">&#43;</sup>
-              </p>
-              <p class="benefits-description">Gifts for regular customers</p>
-            </li>
-          </ul>
+        <div class="benefits-container container">
+          <div class="benefits-left-side">
+            <ul class="benefits-list list">
+              <li class="benefits-item">
+                <p class="title counter">600</p>
+                <p class="benefits-description">Satisfied customers per day</p>
+              </li>
+              <li class="benefits-item">
+                <p class="title counter">50</p>
+                <p class="benefits-description">Awards for excellent service</p>
+              </li>
+              <li class="benefits-item">
+                <p class="title counter">20</p>
+                <p class="benefits-description">Kyiv's best barbers</p>
+              </li>
+              <li class="benefits-item">
+                <p class="title counter">100</p>
+                <p class="benefits-description">Gifts for regular customers</p>
+              </li>
+            </ul>
+          </div>
 
           <div class="benefits-right-side">
             <p class="uppertitle">Old traditional school</p>
-            <h2 class="title">¿Why people come to us?</h2>
+            <h2 class="title">¿Why people come to&nbsp;us?</h2>
             <p>
               Only good things are said about us. But it's better to see and
               feel 1 time than read 10 times.
@@ -263,43 +267,55 @@
                 <p class="description team-post">Extreme Barber</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
-                    <a href="" aria-label="link instagram">
-                      <img
-                        src="./images/icons/instagram-1.svg"
-                        alt="icon instagram"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link instagram"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="team-social-item">
-                    <a href="" aria-label="link twitter">
-                      <img
-                        src="./images/icons/twitter-2.svg"
-                        alt="icon twitter"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link twitter"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="team-social-item">
-                    <a href="" aria-label="link facebook">
-                      <img
-                        src="./images/icons/facebook-3.svg"
-                        alt="icon facebook"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link facebook"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="team-social-item">
-                    <a href="" aria-label="link linkedin">
-                      <img
-                        src="./images/icons/linkedin-4.svg"
-                        alt="icon linkedin"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link linkedin"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
                     </a>
                   </li>
                 </ul>
@@ -319,43 +335,55 @@
                 <p class="description team-post">Extreme Barber</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
-                    <a href="" aria-label="link instagram">
-                      <img
-                        src="./images/icons/instagram-1.svg"
-                        alt="icon instagram"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link instagram"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="team-social-item">
-                    <a href="" aria-label="link twitter">
-                      <img
-                        src="./images/icons/twitter-2.svg"
-                        alt="icon twitter"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link twitter"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="team-social-item">
-                    <a href="" aria-label="link facebook">
-                      <img
-                        src="./images/icons/facebook-3.svg"
-                        alt="icon facebook"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link facebook"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="team-social-item">
-                    <a href="" aria-label="link linkedin">
-                      <img
-                        src="./images/icons/linkedin-4.svg"
-                        alt="icon linkedin"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link linkedin"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
                     </a>
                   </li>
                 </ul>
@@ -375,43 +403,55 @@
                 <p class="description team-post">Extreme Barber</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
-                    <a href="" aria-label="link instagram">
-                      <img
-                        src="./images/icons/instagram-1.svg"
-                        alt="icon instagram"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link instagram"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="team-social-item">
-                    <a href="" aria-label="link twitter">
-                      <img
-                        src="./images/icons/twitter-2.svg"
-                        alt="icon twitter"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link twitter"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="team-social-item">
-                    <a href="" aria-label="link facebook">
-                      <img
-                        src="./images/icons/facebook-3.svg"
-                        alt="icon facebook"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link facebook"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="team-social-item">
-                    <a href="" aria-label="link linkedin">
-                      <img
-                        src="./images/icons/linkedin-4.svg"
-                        alt="icon linkedin"
-                        width="20"
-                        height="20"
-                      />
+                    <a
+                      class="team-social-link"
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener no-referrer"
+                      aria-label="link linkedin"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
                     </a>
                   </li>
                 </ul>
@@ -478,20 +518,36 @@
               <ul class="list">
                 <li class="contact-item">
                   <a
-                    class="location-link link"
+                    class="contact-link location-link link"
                     href="https://goo.gl/maps/XnrUCvhqgfmbvUwt5"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >st. Vasilkovaya, 7A Kiev, 08132</a
+                  >
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-map"></use>
+                    </svg>
+                    st. Vasilkovaya, 7A <br />
+                    Kiev, 08132</a
                   >
                 </li>
                 <li class="contact-item">
-                  <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
+                  <a class="contact-link link" href="tel:+380441111111">
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                    +38 044 111 11 11
+                  </a>
                 </li>
                 <li class="contact-item">
-                  <a class="mail-link" href="mailto:barbershop@email.com"
-                    >barbershop@email.com</a
+                  <a
+                    class="contact-link mail-link"
+                    href="mailto:barbershop@email.com"
                   >
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-mail"></use>
+                    </svg>
+                    barbershop@email.com
+                  </a>
                 </li>
               </ul>
             </address>

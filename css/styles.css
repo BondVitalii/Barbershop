@@ -2,7 +2,7 @@
 .header {
   padding-top: 32px;
   padding-bottom: 32px;
-  background-color: var(--grey-color-60);
+  background-color: var(--primary-bg-cl);
 }
 .header-conteiner {
   display: flex;
@@ -24,15 +24,12 @@
 }
 .header-link::after {
   content: '';
-
   position: absolute;
   bottom: 0;
-
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 4px;
-
   background-color: var(--accent-txt-cl);
 }
 .header-link,
@@ -53,12 +50,25 @@
   color: var(--accent-txt-cl);
 }
 /*__________ Hero section __________*/
-.hero {
-  background-color: var(--primary-bg-cl);
+.hero-container {
+  display: flex;
+}
+.hero-left-side {
+  width: 100px;
 }
 .hero .media-link:hover,
 .hero .media-link:focus {
   color: var(--accent-txt-cl);
+}
+.hero-right-side {
+  flex-grow: 1;
+  padding: 272px 0 208px 100px;
+  background-color: var(--primary-bg-cl);
+  background-image: linear-gradient(var(--overlay-bg-cl), var(--overlay-bg-cl)),
+    url(../images/hero/hero-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
   margin-bottom: 20px;
@@ -146,13 +156,32 @@
   margin-right: auto;
 }
 /*__________ Benefits section __________*/
+.benefits-container {
+  display: flex;
+  gap: 30px;
+}
+.benefits-left-side {
+  width: 570px;
+}
+/* left-side */
+.benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
 .benefits-item {
   width: 170px;
   min-height: 133px;
-  margin-bottom: 30px;
   padding: 20px 24px;
   background-color: var(--light-gray-bg-cl);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.benefits-item:nth-child(2n) {
+  margin-left: 30px;
+  margin-top: 30px;
 }
 .title.counter {
   margin-bottom: 6px;
@@ -161,11 +190,11 @@
   text-align: center;
   font-weight: 700;
 }
-.benefits-decor {
-  text-align: center;
+.title.counter::after {
+  content: '\002B';
   font-size: 16px;
   font-weight: 600;
-  line-height: normal; /* normal */
+  line-height: normal;
   color: var(--accent-txt-cl);
 }
 .benefits-description {
@@ -175,6 +204,7 @@
   text-align: center;
   color: var(--primary-txt-cl);
 }
+/* right-side */
 .benefits-right-side {
   width: 500px;
 }
@@ -211,6 +241,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+}
+.team-social-item {
+}
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--light-bg-cl);
+  border-radius: 50%;
+}
+.socials-icon {
+  fill: var(--primary-txt-cl);
+}
+.team-social-link:hover .socials-icon {
+  fill: var(--accent-txt-cl);
 }
 /*__________ Gallary section __________*/
 .gallery-list {
@@ -251,18 +299,27 @@
 .contact-block {
   margin-bottom: 70px;
   font-style: normal;
-  color: var(--grey-txt-cl);
 }
-.mail-link,
-.schedule-description {
-  font-style: normal;
-  color: var(--grey-txt-cl);
-}
+
 .location-link {
   font-weight: 700;
 }
 .contact-item:not(:last-child) {
   margin-bottom: 20px;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--grey-txt-cl);
+}
+.contacts-icon {
+  fill: transparent;
+  stroke: currentColor;
+}
+/* Schedule */
+.schedule-description {
+  color: var(--grey-txt-cl);
 }
 .schedule-uppertitle {
   margin-bottom: 20px;
