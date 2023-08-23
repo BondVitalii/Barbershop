@@ -30,7 +30,7 @@
   <body>
     <!-- Header section -->
 
-    <header class="header">
+    <header class="header" data-header>
       <div class="header-conteiner container">
         <a class="header-logo link" href="./index.html">
           <img
@@ -44,18 +44,18 @@
         <nav class="header-nav">
           <ul class="header-list list">
             <li class="header-item">
-              <a class="txt header-link link current" href="#about">About</a>
+              <a class="header-link txt link current" href="#about">About</a>
             </li>
             <li class="header-item">
-              <a class="txt header-link link" href="#price"
+              <a class="header-link txt link" href="#price"
                 >Services and prices</a
               >
             </li>
             <li class="header-item">
-              <a class="txt header-link link" href="#team">Barbers</a>
+              <a class="header-link txt link" href="#team">Barbers</a>
             </li>
             <li class="header-item">
-              <a class="txt header-link link" href="#contact">Contacts</a>
+              <a class="header-link txt link" href="#contact">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -587,5 +587,19 @@
         </ul>
       </div>
     </footer>
+
+    <!--Modal-window -->
+    <div class="backdrop" hidden>
+      <div class="modal">
+        <button class="modal-btn" type="button">
+          <svg class="modal-icon" width="20" height="20">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/header.js"></script>
   </body>
 </html>
