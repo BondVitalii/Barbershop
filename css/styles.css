@@ -8,18 +8,23 @@
 
   padding-top: 32px;
   padding-bottom: 32px;
-  /* background-color: var(--primary-bg-cl); */
+  /* background-color: var(--third-bg-cl); */
+  transition: background-color var(--transit-fast),
+    backdrop-filter var(--transit-fast);
 }
 .header.no-transparency {
-  background-color: rgba(17, 19, 25, 0.4);
+  background-color: var(--header-cl);
   backdrop-filter: blur(2px);
 }
 .header-conteiner {
   display: flex;
   align-items: center;
 }
-.header-logo {
+.header-link-logo {
   margin-right: 130px;
+}
+.header-logo-icon {
+  fill: var(--primary-txt-cl);
 }
 .header-list {
   display: flex;
@@ -39,7 +44,9 @@
   padding-top: 20px;
   padding-bottom: 20px;
   letter-spacing: 1.2px;
+
   color: var(--light-txt-cl);
+  transition: color var(--transit-fast);
 }
 .header-link:hover,
 .header-link:focus,
@@ -57,12 +64,37 @@
   border-radius: 4px;
   background-color: var(--accent-txt-cl);
 }
+.header .btn-dark {
+  margin-right: 20px;
+}
 /*__________ Hero section __________*/
 .hero-container {
   display: flex;
 }
 .hero-left-side {
+  display: flex;
+  align-items: flex-end;
+
   width: 100px;
+}
+.hero-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  transform: rotate(-90deg) translateY(30px);
+  transform-origin: center left;
+}
+.hero-list::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--primary-bg-cl);
+}
+.hero .media-link {
+  color: var(--primary-txt-cl);
+  transition: color var(--transit-fast);
 }
 .hero .media-link:hover,
 .hero .media-link:focus {
@@ -71,24 +103,32 @@
 .hero-right-side {
   flex-grow: 1;
   padding: 272px 0 208px 100px;
-  background-color: var(--primary-bg-cl);
+  background-color: var(--third-bg-cl);
   background-image: linear-gradient(var(--overlay-bg-cl), var(--overlay-bg-cl)),
     url(../images/hero/hero-3.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+.hero-uppertitle {
+  animation: move-right 1000ms ease-out 500ms 1 alternate both;
+}
 .hero-title {
   margin-bottom: 20px;
+
   font-family: var(--secondary-fonts);
   font-size: 72px;
   line-height: normal; /* normal */
   letter-spacing: 3.6px;
   color: var(--light-txt-cl);
+
+  animation: move-top 1000ms ease-out 1500ms 1 alternate both;
 }
 .hero-description {
   width: 360px;
   color: var(--grey-txt-cl);
+
+  animation: zoom-in 1000ms ease-out 2500ms 1 alternate both;
 }
 /* slider */
 /*__________ About section __________*/
@@ -221,13 +261,14 @@
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+
   background-color: var(--light-gray-bg-cl);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .team.section {
-  background-color: var(--light-gray-bg-cl);
+  /* background-color: var(--light-gray-bg-cl); */
 }
 .team-item {
   width: 370px;
@@ -253,20 +294,75 @@
 }
 .team-social-item {
 }
+/** Иконки соцсетей, смена цвета 2-варианта
+Вариант-1 (как в макете - смена цвета иконки)
+|============================
 .team-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 44px;
   height: 44px;
+
   background-color: var(--light-bg-cl);
   border-radius: 50%;
 }
 .socials-icon {
-  fill: var(--primary-txt-cl);
+  fill: var(--primary-bg-cl);
+  transition: fill var(--transit-fast);
 }
 .team-social-link:hover .socials-icon {
-  fill: var(--accent-txt-cl);
+  fill: var(--accent-bg-cl);
+}
+|============================
+Вариант-2 (как в файле - смена цвета фона и иконки)
+|============================
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--primary-bg-cl);
+  background-color: var(--light-bg-cl);
+  border-radius: 50%;
+
+  transition: color var(--transit-fast), background-color var(--transit-fast);
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  color: var(--light-bg-cl);
+  background-color: var(--accent-bg-cl);
+}
+.socials-icon {
+  fill: currentColor;
+}
+|============================
+*/
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--primary-bg-cl);
+  background-color: var(--light-bg-cl);
+  border-radius: 50%;
+
+  transition: color var(--transit-fast), background-color var(--transit-fast);
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  color: var(--light-bg-cl);
+  background-color: var(--accent-bg-cl);
+}
+.socials-icon {
+  fill: currentColor;
 }
 /*__________ Gallary section __________*/
 .gallery-list {
@@ -277,7 +373,7 @@
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  background-color: var(--primary-bg-cl);
+  background-color: var(--third-bg-cl);
   background-image: url(../images/contact/contact-img.png);
   background-repeat: no-repeat;
   background-position: top 50% left calc(50% + 408px);
