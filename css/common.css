@@ -95,12 +95,16 @@ img {
   list-style: none;
 }
 /*__________ Common styles __________*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--primary-fonts);
   font-size: 18px;
   font-style: normal;
   line-height: calc(30 / 18); /* 166.667% */
   letter-spacing: 0.36px;
+
   color: var(--grey-cl);
 }
 /*__________ Basic styles __________*/
@@ -112,6 +116,7 @@ body {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+
   padding-left: 15px;
   padding-right: 15px;
   /* outline: 1px solid Red; */
@@ -121,6 +126,7 @@ body {
   font-weight: 600;
   line-height: normal; /* normal */
   letter-spacing: 2.2px;
+
   color: var(--primary-txt-cl);
 }
 .uppertitle {
@@ -134,13 +140,16 @@ body {
   font-weight: 600;
   line-height: normal; /* normal */
   text-transform: uppercase;
+
   color: var(--primary-txt-cl);
 }
 .uppertitle::before {
   content: '';
+
   display: block;
   width: 60px;
   height: 1px;
+
   background-color: var(--primary-txt-cl);
 }
 .uppertitle-grey {
@@ -151,10 +160,12 @@ body {
 }
 .title {
   margin-bottom: 20px;
+
   font-family: var(--secondary-fonts);
   font-size: 42px;
   line-height: normal; /* normal */
   letter-spacing: 2.1px;
+
   color: var(--primary-txt-cl);
 }
 .title-white {
@@ -166,10 +177,12 @@ body {
 }
 .subtitle {
   margin-bottom: 20px;
+
   color: var(--grey-cl);
 }
 .description {
   margin-bottom: 42px;
+
   font-size: 14px;
   line-height: calc(26 / 14); /* 185.714% */
   letter-spacing: 0.28px;
