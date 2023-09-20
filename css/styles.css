@@ -509,7 +509,7 @@
   transition: opacity var(--transit-fast), visibility var(--transit-fast);
 }
 .backdrop.is-hidden {
-  opacity: 0;
+  /* opacity: 0; */
   visibility: hidden;
   pointer-events: none;
 
@@ -540,6 +540,7 @@
   opacity: 0;
   transition-delay: 0s;
 }
+/* modal-btn-close */
 .modal-btn {
   position: absolute;
   top: 24px;
