@@ -564,3 +564,10 @@
 .modal-icon {
   fill: var(--light-bg-cl);
 }
+/*---------- Form ----------*/
+.booking-form {
+  color: #fff;
+}
+label {
+  display: block;
+}
