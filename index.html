@@ -517,7 +517,32 @@
           <!-- Booking section -->
           <section class="booking section">
             <h2 class="title title-white">Online-booking</h2>
-            <button class="txt btn btn-dark" type="button">send</button>
+
+            <!-- Form booking -->
+            <form
+              class="booking-form"
+              name="booking_form"
+              novnovaino
+              autocomplete="off"
+            >
+              <div class="booking-wrapper">
+                <label class="booking-field">
+                  <input class="booking-input" type="text" name="user_name" />
+                  <span class="booking-badge">Name*</span>
+                </label>
+                <label class="booking-field">
+                  <input class="booking-input" type="tel" name="user_phohe" />
+                  <span class="booking-badge">Phone*</span>
+                </label>
+              </div>
+              <label class="booking-field">
+                <textarea name="user_message" rows="6"></textarea>
+                <span class="booking-badge">Message</span>
+              </label>
+
+              <button type="submit" class="txt btn btn-dark">Send</button>
+            </form>
+            <!-- <button class="txt btn btn-dark" type="submit">send</button> -->
           </section>
           <!-- Contact section -->
           <section class="contact section" id="contact">
@@ -596,14 +621,124 @@
       </div>
     </footer>
 
-    <!--Modal-window -->
-    <div class="backdrop is-hidden" data-modal>
+    <!----------------- Modal-window ----------------->
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
-          <svg class="modal-icon" width="20" height="20">
+          <svg class="modal-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <!-- ---------- Form-styles ---------- -->
+
+        <strong class="modal-title description">
+          Leave your contacts and we will call you back
+        </strong>
+        <!-- Name field -->
+        <form class="modal-form" name="modal_form">
+          <label class="modal-form-label" for="user_sing">Name</label>
+          <div class="modal-form-group">
+            <input
+              class="modal-form-field"
+              type="text"
+              id="user_sing"
+              required
+              minlength="2"
+              pattern=""
+            />
+            <svg class="modal-form-icon" width="25" height="25">
+              <use href="./images/icons.svg#user-icon"></use>
+            </svg>
+          </div>
+          <!-- Второй вариант записи input внутри label
+          <label for="">
+            <span>Name</span>
+            <input type="text" />
+            <svg class="" width="" height="">
+              <use href=""></use>
+            </svg>
+          </label> -->
+
+          <!-- Phone field -->
+          <label class="modal-form-label" for="user_telephone">Phone</label>
+          <div class="modal-form-group">
+            <input
+              class="modal-form-field"
+              type="tel"
+              id="user_telephone"
+              required
+            />
+            <svg class="modal-form-icon" width="25" height="25">
+              <use href="./images/icons.svg#mail-icon"></use>
+            </svg>
+          </div>
+
+          <!-- Email field -->
+          <label class="modal-form-label" for="user_email">Email</label>
+          <div class="modal-form-group">
+            <input
+              class="modal-form-field"
+              type="email"
+              id="user_email"
+              required
+            />
+            <svg class="modal-form-icon" width="25" height="25">
+              <use href="./images/icons.svg#phone-icon"></use>
+            </svg>
+          </div>
+
+          <!-- Comment field -->
+          <label class="modal-form-label" for="user_comment">Comment</label>
+          <textarea
+            class="modal-form-comment"
+            name="user_comment"
+            id="user_comment"
+            rows="6"
+            placeholder="Type your comment..."
+          ></textarea>
+
+          <!-- Agreement-field -->
+          <label class="modal-form-agreement" for="user_agreement">
+            <input
+              class="modal-form-checkbox visually-hidden"
+              type="checkbox"
+              name="user-agreement"
+              id="user_agreement"
+              required
+              data-modal-checkbox
+            />
+            <!------- Кастомный checkbox (Дополнительный/второй вариант checkbox) ------->
+            <svg class="custom-checkbox" width="16" height="16">
+              <use
+                class="custom-checkbox-frame"
+                href="./images/icons.svg#icon-checbox"
+              ></use>
+              <use
+                class="custom-checkbox-check"
+                href="./images/icons.svg#icon-check"
+              ></use>
+            </svg>
+            <!-- --------------------- -->
+
+            <span class="modal-form-desc"
+              >I accept the terms and conditions of the
+              <a class="modal-form-link" href="" target="_blank"
+                >Privacy Policy</a
+              ></span
+            >
+          </label>
+
+          <!-- Form-button-->
+          <button
+            class="modal-form-btn txt btn"
+            type="submit"
+            disabled
+            data-modal-submit
+          >
+            Submit
+          </button>
+        </form>
       </div>
     </div>
 
