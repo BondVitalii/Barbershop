@@ -518,7 +518,7 @@
           <section class="booking section">
             <h2 class="title title-white">Online-booking</h2>
 
-            <!-- Form -->
+            <!-- Form booking -->
             <form
               class="booking-form"
               name="booking_form"
@@ -621,26 +621,34 @@
       </div>
     </footer>
 
-    <!--Modal-window -->
-    <div class="backdrop is-hidden" data-modal>
+    <!----------------- Modal-window ----------------->
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
-          <svg class="modal-icon" width="20" height="20">
+          <svg class="modal-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
 
-        <strong class="modal-title">
+        <!-- ---------- Form-styles ---------- -->
+
+        <strong class="modal-title description">
           Leave your contacts and we will call you back
         </strong>
-
         <!-- Name field -->
         <form class="modal-form" name="modal_form">
           <label class="modal-form-label" for="user_sing">Name</label>
           <div class="modal-form-group">
-            <input class="modal-form-field" type="text" id="user_sing" />
-            <svg class="modal-form-icon" width="20" height="20">
-              <use href=""></use>
+            <input
+              class="modal-form-field"
+              type="text"
+              id="user_sing"
+              required
+              minlength="2"
+              pattern=""
+            />
+            <svg class="modal-form-icon" width="25" height="25">
+              <use href="./images/icons.svg#user-icon"></use>
             </svg>
           </div>
           <!-- Второй вариант записи input внутри label
@@ -655,18 +663,28 @@
           <!-- Phone field -->
           <label class="modal-form-label" for="user_telephone">Phone</label>
           <div class="modal-form-group">
-            <input class="modal-form-field" type="tel" id="user_telephone" />
-            <svg class="modal-form-icon" width="20" height="20">
-              <use href=""></use>
+            <input
+              class="modal-form-field"
+              type="tel"
+              id="user_telephone"
+              required
+            />
+            <svg class="modal-form-icon" width="25" height="25">
+              <use href="./images/icons.svg#mail-icon"></use>
             </svg>
           </div>
 
           <!-- Email field -->
           <label class="modal-form-label" for="user_email">Email</label>
           <div class="modal-form-group">
-            <input class="modal-form-field" type="text" id="user_email" />
-            <svg class="modal-form-icon" width="20" height="20">
-              <use href=""></use>
+            <input
+              class="modal-form-field"
+              type="email"
+              id="user_email"
+              required
+            />
+            <svg class="modal-form-icon" width="25" height="25">
+              <use href="./images/icons.svg#phone-icon"></use>
             </svg>
           </div>
 
@@ -681,12 +699,28 @@
           ></textarea>
 
           <!-- Agreement-field -->
-          <label class="modal-form-agreement">
+          <label class="modal-form-agreement" for="user_agreement">
             <input
-              class="modal-form-checkbox"
+              class="modal-form-checkbox visually-hidden"
               type="checkbox"
               name="user-agreement"
+              id="user_agreement"
+              required
+              data-modal-checkbox
             />
+            <!------- Кастомный checkbox (Дополнительный/второй вариант checkbox) ------->
+            <svg class="custom-checkbox" width="16" height="16">
+              <use
+                class="custom-checkbox-frame"
+                href="./images/icons.svg#icon-checbox"
+              ></use>
+              <use
+                class="custom-checkbox-check"
+                href="./images/icons.svg#icon-check"
+              ></use>
+            </svg>
+            <!-- --------------------- -->
+
             <span class="modal-form-desc"
               >I accept the terms and conditions of the
               <a class="modal-form-link" href="" target="_blank"
@@ -696,7 +730,14 @@
           </label>
 
           <!-- Form-button-->
-          <button class="modal-form-btn txt btn" type="submit">Submit</button>
+          <button
+            class="modal-form-btn txt btn"
+            type="submit"
+            disabled
+            data-modal-submit
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
