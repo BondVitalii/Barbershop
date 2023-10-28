@@ -735,8 +735,7 @@
   border-radius: 6px;
   border: 1px solid var(--primary-bg-cl);
 
-  /* outline: transparent; При фокусе рамка не выделяется */
-  outline: 2px solid transparent;
+  outline: 2px solid transparent; /* outline: transparent; При фокусе рамка не выделяется */
   outline-offset: -1px;
 
   transition: outline-color var(--transit-fast), box-shadow var(--transit-fast);
@@ -754,8 +753,7 @@
   left: 10px;
   transform: translateY(-50%);
 
-  /* pointer-events: none; иконка прозрачная для кликов-некликабельная */
-  pointer-events: none;
+  pointer-events: none; /* pointer-events: none; иконка прозрачная для кликов-некликабельная */
 
   transition: fill var(--transit-fast);
 }
@@ -771,14 +769,12 @@
   margin-bottom: 20px;
   font-size: 13px;
 
-  /* resize: none; запрет растяжки поля коментария */
-  resize: none;
+  resize: none; /* resize: none; запрет растяжки поля коментария */
 
   border-radius: 6px;
   border: 1px solid var(--primary-bg-cl);
 
-  /* outline: transparent; При фокусе рамка не выделяется */
-  outline: 2px solid transparent;
+  outline: 2px solid transparent; /* outline: transparent; При фокусе рамка не выделяется */
   outline-offset: -1px;
   transition: outline-color var(--transit-fast), box-shadow var(--transit-fast);
 }
@@ -795,8 +791,7 @@
 }
 /* ----- Checkbox первый вариант ----- */
 .modal-form-checkbox {
-  /* appearance: none; Обнуляет checkbox (прячет его) */
-  appearance: none;
+  appearance: none; /* appearance: none; Обнуляет checkbox (прячет его) */
   display: block;
   width: 16px;
   height: 16px;
@@ -849,8 +844,7 @@
   line-height: calc(26 / 14);
   letter-spacing: 0.24px;
 
-  /* user-select: none; запрет копирования текста */
-  user-select: none;
+  user-select: none; /* user-select: none; запрет копирования текста */
 }
 .modal-form-link {
   color: var(--accent-txt-cl);
@@ -867,6 +861,5 @@
   background-color: transparent;
   color: inherit;
 
-  /* cursor: not-allowed; курсор неактивный, подсказка пользователю*/
-  cursor: not-allowed;
+  cursor: not-allowed; /* cursor: not-allowed; курсор неактивный, подсказка пользователю*/
 }
