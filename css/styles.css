@@ -1,3 +1,249 @@
+:root {
+  /* Fonts */
+  --primary-fonts: Open Sans, sans-serif;
+  --secondary-fonts: Raleway, sans-serif;
+  /* Text colors */
+  --primary-txt-cl: #303030;
+  --light-txt-cl: #ffffff;
+  --grey-cl: #555555;
+  --grey-txt-cl: #9da4bd;
+  --grey-color-60: rgba(157, 164, 189, 0.6);
+  --grey-color-40: rgba(157, 164, 189, 0.4);
+  --accent-txt-cl: #ff6c00;
+  /* BG colors */
+  --primary-bg-cl: #303030;
+  --secondary-bg-cl: #111319;
+  --third-bg-cl: #191c26;
+  --light-bg-cl: #ffffff;
+  --light-gray-bg-cl: #f7f7f7;
+  --accent-bg-cl: #ff6c00;
+  --grey-color-12: rgba(157, 164, 189, 0.12);
+  --overlay-bg-cl: rgba(25, 28, 38, 0.2);
+  --header-cl: rgba(17, 19, 25, 0.4);
+  /* Others */
+  --radius: 25px;
+  --indent: 30px;
+  --items: 3;
+  /* Transition time */
+  /* --transit-fast: 1800ms ease-in-out; */
+  --transit-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transit-slow: ;
+}
+/* Animations */
+@keyframes move-right {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes move-top {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*__________ Visually hidden __________*/
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+/*__________ Reset styles __________*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.link {
+  text-decoration: none; /* Убираем подчеркивание у ссылок */
+  color: currentColor; /* Наследование цвета ссылки от родителя */
+}
+.list {
+  list-style: none; /* Убираем стандартные стили у списка (точки) */
+}
+/*__________ Common styles __________*/
+html {
+  scroll-behavior: smooth; /* Плавный скролл страницы */
+}
+body {
+  font-family: var(--primary-fonts);
+  font-size: 18px;
+  font-style: normal;
+  line-height: calc(30 / 18); /* 166.667% */
+  letter-spacing: 0.36px;
+
+  color: var(--grey-cl);
+}
+/*__________ Basic styles __________*/
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  /* outline: 1px solid Red; */
+}
+.media-link {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: normal; /* normal */
+  letter-spacing: 2.2px;
+
+  color: var(--primary-txt-cl);
+}
+.uppertitle {
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: normal; /* normal */
+  text-transform: uppercase;
+
+  color: var(--primary-txt-cl);
+}
+.uppertitle::before {
+  content: '';
+
+  display: block;
+  width: 60px;
+  height: 1px;
+
+  background-color: var(--primary-txt-cl);
+}
+.uppertitle-grey {
+  color: var(--grey-color-60);
+}
+.uppertitle-grey::before {
+  background-color: var(--grey-color-60);
+}
+.title {
+  margin-bottom: 20px;
+
+  font-family: var(--secondary-fonts);
+  font-size: 42px;
+  line-height: normal; /* normal */
+  letter-spacing: 2.1px;
+
+  color: var(--primary-txt-cl);
+}
+.title-white {
+  color: var(--light-txt-cl);
+}
+/* Hidden-title */
+.hidden-title {
+  display: none; /* Прячем заголовок вариант-1 */
+}
+.subtitle {
+  margin-bottom: 20px;
+
+  color: var(--grey-cl);
+}
+.description {
+  margin-bottom: 42px;
+
+  font-size: 14px;
+  line-height: calc(26 / 14); /* 185.714% */
+  letter-spacing: 0.28px;
+}
+.txt {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal; /* normal */
+}
+/* button */
+/* Кнопки не наследуют стили от боди, прописываем стили полностью для кнопок */
+.btn {
+  min-width: 160px;
+  min-height: 40px;
+  padding: 12px 20px;
+
+  border-radius: var(--radius);
+  border: 1px solid var(--accent-bg-cl);
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: normal; /* normal */
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+
+  color: var(--primary-txt-cl);
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: background-color var(--transit-fast);
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-bg-cl);
+}
+.btn-dark {
+  color: var(--light-txt-cl);
+}
+/* Card-set */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * var(--items) - 1)) / var(--items); /* Формула для портфолио */
+}
 /*__________ Header section __________*/
 .header {
   position: fixed;
@@ -127,14 +373,14 @@
 
   color: var(--light-txt-cl);
 
-  animation: move-top 1000ms ease-out 1500ms 1 alternate both;
+  animation: move-top 1000ms ease-out 1500ms 1 alternate both; /* Анимация */
 }
 .hero-description {
   width: 360px;
 
   color: var(--grey-txt-cl);
 
-  animation: zoom-in 1000ms ease-out 2500ms 1 alternate both;
+  animation: zoom-in 1000ms ease-out 2500ms 1 alternate both; /* Анимация */
 }
 /* slider */
 /*__________ About section __________*/
@@ -148,7 +394,7 @@
 }
 .about-item {
   /* outline: 2px solid red; */
-  overflow: hidden;
+  overflow: hidden; /* Прячем все что находится за пределами элемента */
 }
 .about-img {
   transition: transform var(--transit-fast);
@@ -207,8 +453,9 @@
   color: var(--grey-txt-cl);
 }
 .service-item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Убираем геометрию (margin) у крайних элементов */
 }
+
 .price-line {
   display: block;
   flex-grow: 1;
@@ -250,9 +497,9 @@
 }
 .title.counter {
   margin-bottom: 6px;
-  text-align: center;
+  text-align: center; /* Ставим текст по центру элемента */
   font-family: var(--primary-fonts);
-  text-align: center;
+  text-align: center; /* ??? */
   font-weight: 700;
 }
 .title.counter::after {
@@ -266,7 +513,7 @@
   font-size: 11px;
   font-weight: 600;
   line-height: normal; /* normal */
-  text-align: center;
+  text-align: center; /* Ставим текст по центру элемента */
   color: var(--primary-txt-cl);
 }
 /* right-side */
@@ -292,7 +539,7 @@
 }
 .team-wrapper {
   padding-top: 30px;
-  text-align: center;
+  text-align: center; /* Ставим текст по центру элемента */
 }
 .team-name {
   margin-bottom: 8px;
@@ -379,7 +626,7 @@
   background-color: var(--accent-bg-cl);
 }
 .socials-icon {
-  fill: currentColor;
+  fill: currentColor; /* Наследуем цвет иконки от родиельского блока */
 }
 /*__________ Gallary section __________*/
 .gallery-list {
@@ -569,7 +816,7 @@
   font-weight: 700;
 }
 .contact-item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Убираем геометрию (margin) у крайних элементов */
 }
 .contact-link {
   display: flex;
@@ -578,8 +825,8 @@
   color: var(--grey-txt-cl);
 }
 .contacts-icon {
-  fill: transparent;
-  stroke: currentColor;
+  fill: transparent; /* Делаем цвет иконки прозрачным */
+  stroke: currentColor; /* Наследуем цвет обводки иконки от родительского блока*/
 }
 /* Schedule */
 .schedule-description {
