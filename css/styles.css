@@ -957,7 +957,7 @@ body {
 .modal-icon {
   fill: var(--light-bg-cl);
 }
-/*__________ Modal-form-styles __________*/
+/*__________ Form-modal __________*/
 .modal-title {
   display: block;
   margin-bottom: 16px;
