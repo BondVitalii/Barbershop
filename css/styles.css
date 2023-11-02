@@ -986,7 +986,8 @@ body {
   outline: 2px solid transparent; /* outline: transparent; При фокусе рамка не выделяется */
   outline-offset: -1px;
 
-  transition: outline-color var(--transit-fast), box-shadow var(--transit-fast);
+  transition: outline-color var(--transit-fast),
+    border-color var(--transit-fast), box-shadow var(--transit-fast);
 }
 .modal-form-field:focus,
 .modal-form-field:focus-visible,
