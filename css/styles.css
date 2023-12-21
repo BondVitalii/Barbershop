@@ -97,29 +97,23 @@ ul,
 li {
   margin: 0;
   padding: 0;
-  /* Убираем все паддинги и марджины у всех заголовков, параграфов, списков */
 }
 img {
   display: block;
   max-width: 100%;
   height: auto;
-  /* Примечание
-- ставим картинке display: block; чтоб убрать нижний зазор.
-- ставим картинке max-width: 100%; чтоб была 100% ширины картинки.
-- ставим картинке height: auto; чтоб высота высчитывалась автоматически.
-*/
 }
 .link {
-  text-decoration: none; /* Убираем подчеркивание у ссылок */
-  color: currentColor; /* Наследование цвета ссылки от родителя */
+  text-decoration: none;
+  color: currentColor;
 }
 .list {
-  list-style: none; /* Убираем стандартные стили у списка (точки) */
+  list-style: none;
 }
 
 /* =============== Common styles =============== */
 html {
-  scroll-behavior: smooth; /* Плавный скролл страницы */
+  scroll-behavior: smooth;
 }
 body {
   /* Базовые стили для body */
@@ -132,8 +126,6 @@ body {
   color: var(--grey-cl);
 }
 button {
-  /* cursor: pointer; меняет вид курсора при активном состоянии элемента (::hover, ::focus).
-  Задаем этот параметр глобально всем кнопкам */
   cursor: pointer;
 }
 
@@ -223,7 +215,7 @@ button {
 }
 /* Hidden-title */
 .hidden-title {
-  display: none; /* Прячем заголовок вариант-1 */
+  display: none;
 }
 /*__________ button __________*/
 
@@ -462,7 +454,7 @@ button {
 }
 .about-item {
   /* outline: 2px solid red; */
-  overflow: hidden; /* Прячем все что находится за пределами элемента */
+  overflow: hidden;
 }
 .about-img {
   transition: transform var(--transit-fast);
@@ -521,7 +513,7 @@ button {
   color: var(--grey-txt-cl);
 }
 .service-item:not(:last-child) {
-  margin-bottom: 20px; /* Убираем геометрию (margin) у крайних элементов */
+  margin-bottom: 20px;
 }
 
 .price-line {
@@ -580,8 +572,8 @@ button {
 .benefits-description {
   font-size: 11px;
   font-weight: 600;
-  line-height: normal; /* normal */
-  text-align: center; /* Ставим текст по центру элемента */
+  line-height: normal;
+  text-align: center;
   color: var(--primary-txt-cl);
 }
 /* right-side */
@@ -607,7 +599,7 @@ button {
 }
 .team-wrapper {
   padding-top: 30px;
-  text-align: center; /* Ставим текст по центру элемента */
+  text-align: center;
 }
 .team-name {
   margin-bottom: 8px;
@@ -694,7 +686,7 @@ button {
   background-color: var(--accent-bg-cl);
 }
 .socials-icon {
-  fill: currentColor; /* Наследуем цвет иконки от родиельского блока */
+  fill: currentColor;
 }
 /*__________ Gallary section __________*/
 .gallery-list {
@@ -884,7 +876,7 @@ button {
   font-weight: 700;
 }
 .contact-item:not(:last-child) {
-  margin-bottom: 20px; /* Убираем геометрию (margin) у крайних элементов */
+  margin-bottom: 20px;
 }
 .contact-link {
   display: flex;
@@ -893,8 +885,8 @@ button {
   color: var(--grey-txt-cl);
 }
 .contacts-icon {
-  fill: transparent; /* Делаем цвет иконки прозрачным */
-  stroke: currentColor; /* Наследуем цвет обводки иконки от родительского блока*/
+  fill: transparent;
+  stroke: currentColor;
 }
 /* Schedule */
 .schedule-description {
@@ -967,14 +959,9 @@ button {
   transition: opacity var(--transit-fast), visibility var(--transit-fast);
 }
 .backdrop.is-hidden {
-  /* Это мы ставим, чтоб пока наше модальное окно backdrop закрыто, 
-  через него можно было воздействовать (кликать) на другие объекты которые под ним. */
-
   /* opacity: 0; */
   visibility: hidden;
   pointer-events: none;
-  /* pointer-events: none; - Элемент не может быть целью (target) событий мыши;
-   тем не менее, целью событий мыши могут быть его потомки, если их pointer-events имеет какое-либо другое значение. В этом случае события мыши вызовут ожидаемое срабатывание обработчиков на этом родительском элементе на пути к/от потомк(у)/(а) во время фазы захвата/всплытия. */
 
   transition-delay: 250ms; /* или тут, или в modal transition-delay: 400ms; */
 }
@@ -1024,7 +1011,7 @@ button {
 
   background-color: var(--accent-bg-cl);
 
-  cursor: pointer; /* cursor: pointer; отображение курсора в виде руки */
+  cursor: pointer;
 }
 .modal-icon {
   fill: var(--light-bg-cl);
@@ -1055,7 +1042,7 @@ button {
   border-radius: 6px;
   border: 1px solid var(--primary-bg-cl);
 
-  outline: 2px solid transparent; /* outline: transparent; При фокусе рамка не выделяется */
+  outline: 2px solid transparent;
   outline-offset: -1px;
 
   transition: outline-color var(--transit-fast),
@@ -1075,7 +1062,7 @@ button {
   left: 10px;
   transform: translateY(-50%);
 
-  pointer-events: none; /* pointer-events: none; иконка прозрачная для кликов-некликабельная */
+  pointer-events: none;
 
   transition: fill var(--transit-fast);
 }
@@ -1091,12 +1078,12 @@ button {
   margin-bottom: 20px;
   font-size: 13px;
 
-  resize: none; /* resize: none; запрет растяжки поля коментария */
+  resize: none;
 
   border-radius: 6px;
   border: 1px solid var(--primary-bg-cl);
 
-  outline: 2px solid transparent; /* outline: transparent; При фокусе рамка не выделяется */
+  outline: 2px solid transparent;
   outline-offset: -1px;
   transition: outline-color var(--transit-fast), box-shadow var(--transit-fast);
 }
@@ -1113,7 +1100,7 @@ button {
 }
 /* ----- Checkbox первый вариант ----- */
 .modal-form-checkbox {
-  appearance: none; /* appearance: none; Обнуляет checkbox (прячет его) */
+  appearance: none;
   display: block;
   width: 16px;
   height: 16px;
@@ -1166,7 +1153,7 @@ button {
   line-height: calc(26 / 14);
   letter-spacing: 0.24px;
 
-  user-select: none; /* user-select: none; запрет копирования текста */
+  user-select: none;
 }
 .modal-form-link {
   color: var(--accent-txt-cl);
@@ -1183,5 +1170,5 @@ button {
   background-color: transparent;
   color: inherit;
 
-  cursor: not-allowed; /* cursor: not-allowed; курсор неактивный, подсказка пользователю*/
+  cursor: not-allowed;
 }
