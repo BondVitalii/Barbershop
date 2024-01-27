@@ -139,12 +139,12 @@ button {
 
 /* =============== Basic style =============== */
 .section {
-  /* Задаем размеры секции */
+  /* Задаем базовые размеры секции */
   padding-top: 120px;
   padding-bottom: 120px;
 }
 .container {
-  /* Задаем размеры контейнера */
+  /* Задаем базовые размеры контейнера */
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -227,7 +227,8 @@ button {
 }
 /*__________ button __________*/
 
-/* Кнопки не наследуют стили от боди, прописываем стили полностью для кнопок */
+/* Кнопки не наследуют стили от боди, 
+прописываем стили полностью для кнопок */
 .btn {
   min-width: 160px;
   min-height: 40px;
@@ -265,7 +266,7 @@ button {
 }
 .card-set-item {
   /* Формула для портфолио */
-  flex-basis: calc((100% - var(--indent) * var(--items) - 1)) / var(--items);
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 /*__________ Visually hidden __________*/
 
@@ -334,7 +335,7 @@ button {
   display: flex;
   align-items: center;
 }
-.header-link-logo {
+.header-logo {
   margin-right: 130px;
 }
 .header-logo-icon {
@@ -393,7 +394,7 @@ button {
 
   width: 100px;
 }
-.hero-list {
+.hero-media {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -401,7 +402,7 @@ button {
   transform: rotate(-90deg) translateY(30px);
   transform-origin: center left;
 }
-.hero-list::before {
+.hero-media::before {
   content: '';
   display: block;
   width: 60px;
@@ -428,7 +429,7 @@ button {
   background-position: center;
   background-size: cover;
 }
-.hero-uppertitle {
+.hero-uppertitle-animation {
   animation: move-right 1000ms ease-out 500ms 1 alternate both;
 }
 .hero-title {
@@ -514,13 +515,13 @@ button {
     rgba(9, 11, 19, 0.2) 100%
   );
 }
-.service-item {
+.price-item {
   display: flex;
   align-items: baseline;
   gap: 12px;
   color: var(--grey-txt-cl);
 }
-.service-item:not(:last-child) {
+.price-item:not(:last-child) {
   margin-bottom: 20px; /* Убираем геометрию (margin) у крайних элементов */
 }
 
