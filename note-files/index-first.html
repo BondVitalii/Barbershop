@@ -28,7 +28,8 @@
 
     <!------------Custom styles / My styles Подключение моих стилей CSS------------>
     <!-- <link rel="stylesheet" href="./css/common.css" /> -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="./css/m-7-practic.css" />
   </head>
   <body>
     <!-- Header section -->
@@ -39,8 +40,14 @@
           <svg class="header-logo-icon" width="70" height="56">
             <use href="./images/icons.svg#icon-logo"></use>
           </svg>
+          <!-- <img
+            class="header-logo-img"
+            src="./images/header/logo.svg"
+            alt="BarberShop logo"
+            width="70"
+            height="56"
+          /> -->
         </a>
-
         <nav class="header-nav">
           <ul class="header-list list">
             <li class="header-item">
@@ -55,29 +62,16 @@
               <a class="header-link txt link" href="#team">Barbers</a>
             </li>
             <li class="header-item">
-              <a class="header-link txt link" href="#contacts">Contacts</a>
+              <a class="header-link txt link" href="#contact">Contacts</a>
             </li>
           </ul>
         </nav>
 
-        <div class="header-wrapper">
-          <a class="header-contact txt link" href="tel:+380441111111"
-            >+38 044 111 11 11</a
-          >
-          <button class="btn-dark btn txt" type="button" data-modal-open>
-            Online-booking
-          </button>
-        </div>
-
-        <button
-          class="header-menu-btn js-open-menu"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
+        <a class="header-contact txt link" href="tel:+380441111111"
+          >+38 044 111 11 11</a
         >
-          <svg class="header-menu-icon" width="40" height="40">
-            <use href="./images/icons.svg#icon-menu"></use>
-          </svg>
+        <button class="btn-dark btn txt" type="button" data-modal-open>
+          Online-booking
         </button>
       </div>
     </header>
@@ -87,7 +81,7 @@
       <section class="hero">
         <div class="hero-container container">
           <div class="hero-left-side">
-            <ul class="hero-media media list">
+            <ul class="hero-media list">
               <li class="hero-item">
                 <a
                   class="media-link link"
@@ -119,17 +113,18 @@
               carefully and with style.
             </p>
 
+            <!-- slider pagination -->
             <ul class="slider-pagination list" hidden>
               <li class="slider-pagination-item"></li>
               <li class="slider-pagination-item"></li>
               <li class="slider-pagination-item"></li>
             </ul>
-
-            <ul class="slider-controls list">
+            <!-- slider controls -->
+            <ul class="slider-controls list" hidden>
               <li class="slider-controls-item">
                 <button class="slider-controls-btn" type="button">Back</button>
               </li>
-              <li class="slider-controls-item current">
+              <li class="slider-controls-item">
                 <button class="slider-controls-btn" type="button">
                   Forward
                 </button>
@@ -144,92 +139,22 @@
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
-              <picture>
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="
-                    ./images/about/img-1_desk@1x.webp 1x,
-                    ./images/about/img-1_desk@2x.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="
-                    ./images/about/img-1_desk@1x.jpg 1x,
-                    ./images/about/img-1_desk@2x.jpg 2x
-                  "
-                  type="image/jpg"
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    ./images/about/img-1_tab@1x.webp 1x,
-                    ./images/about/img-1_tab@2x.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    ./images/about/img-1_tab@1x.jpg 1x,
-                    ./images/about/img-1_tab@2x.jpg 2x
-                  "
-                  type="image/jpg"
-                />
-                <img
-                  class="about-img"
-                  src="./images/about/img-1_tab@1x.jpg"
-                  alt="Beard trim"
-                  width="330"
-                  height="235"
-                  loading="lazy"
-                />
-              </picture>
+              <img
+                class="about-img"
+                src="./images/about/img-1.jpg"
+                alt="Beard trim"
+                width="270"
+                height="445"
+              />
             </li>
             <li class="about-item">
-              <picture>
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="
-                    ./images/about/img-2_desk@1x.webp 1x,
-                    ./images/about/img-2_desk@2x.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="
-                    ./images/about/img-2_desk@1x.jpg 1x,
-                    ./images/about/img-2_desk@2x.jpg 2x
-                  "
-                  type="image/jpg"
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    ./images/about/img-2_tab@1x.webp 1x,
-                    ./images/about/img-2_tab@2x.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    ./images/about/img-2_tab@1x.jpg 1x,
-                    ./images/about/img-2_tab@2x.jpg 2x
-                  "
-                  type="image/jpg"
-                />
-                <img
-                  class="about-img"
-                  src="./images/about/img-2_tab@1x.jpg"
-                  alt="Head haircut"
-                  width="330"
-                  height="235"
-                  loading="lazy"
-                />
-              </picture>
+              <img
+                class="about-img"
+                src="./images/about/img-2.jpg"
+                alt="Head haircut"
+                width="270"
+                height="445"
+              />
             </li>
           </ul>
           <div class="about-right-side">
@@ -239,20 +164,20 @@
               If you want to add more confidence to your image, you should
               definitely visit us.
             </p>
-            <p class="about-description">
+            <p class="description">
               We are a team that never stops at what has been achieved and are
               thirsty for changes. And when you fall into the hands of our
               master, you will never be the same again. We are a team that is
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="btn" type="button">ONLINE-BOOKING</button>
+            <button class="txt btn" type="button">ONLINE-BOOKING</button>
           </div>
         </div>
       </section>
 
-      <!-- Price section -->
-      <section class="price" id="price">
+      <!-- Service section -->
+      <section class="service section" id="price">
         <div class="container">
           <p class="uppertitle uppertitle-grey">
             Spend your time with the best masters
@@ -293,15 +218,36 @@
             </ul>
           </div>
 
-          <button class="btn btn-dark price-btn" type="button">
+          <button class="txt btn btn-dark price-btn" type="button">
             online-booking
           </button>
         </div>
       </section>
 
       <!-- Benefits section -->
-      <section class="benefits">
+      <section class="benefits section">
         <div class="benefits-container container">
+          <div class="benefits-left-side">
+            <ul class="benefits-list list">
+              <li class="benefits-item">
+                <p class="title counter">600</p>
+                <p class="benefits-description">Satisfied customers per day</p>
+              </li>
+              <li class="benefits-item">
+                <p class="title counter">50</p>
+                <p class="benefits-description">Awards for excellent service</p>
+              </li>
+              <li class="benefits-item">
+                <p class="title counter">20</p>
+                <p class="benefits-description">Kyiv's best barbers</p>
+              </li>
+              <li class="benefits-item">
+                <p class="title counter">100</p>
+                <p class="benefits-description">Gifts for regular customers</p>
+              </li>
+            </ul>
+          </div>
+
           <div class="benefits-right-side">
             <p class="uppertitle">Old traditional school</p>
             <h2 class="title">¿Why people come to&nbsp;us?</h2>
@@ -310,61 +256,27 @@
               feel 1 time than read 10 times.
             </p>
           </div>
-          <div class="benefits-left-side">
-            <ul class="benefits-list list">
-              <li class="benefits-item">
-                <p class="benefits-quentity">600</p>
-                <p class="benefits-text">Satisfied customers per day</p>
-              </li>
-              <li class="benefits-item">
-                <p class="benefits-quentity">50</p>
-                <p class="benefits-text">Awards for excellent service</p>
-              </li>
-              <li class="benefits-item">
-                <p class="benefits-quentity">20</p>
-                <p class="benefits-text">Kyiv's best barbers</p>
-              </li>
-              <li class="benefits-item">
-                <p class="benefits-quentity">100</p>
-                <p class="benefits-text">Gifts for regular customers</p>
-              </li>
-            </ul>
-          </div>
         </div>
       </section>
 
       <!-- Team section -->
-      <section class="team" id="team">
-        <div class="team-container container">
+      <section class="team section" id="team">
+        <div class="container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
-          <h2 class="team-title title">Our barbers</h2>
+          <h2 class="title">Our barbers</h2>
 
-          <ul class="team-list card-set list">
+          <ul class="card-set list">
             <li class="team-item card-set-item">
               <img
                 class="team-avatar"
-                srcset="
-                  ./images/team/img1_370.jpg 370w,
-                  ./images/team/img1_418.jpg 418w,
-                  ./images/team/img1_450.jpg 450w,
-                  ./images/team/img1_740.jpg 740w,
-                  ./images/team/img1_836.jpg 836w,
-                  ./images/team/img1_900.jpg 900w
-                "
-                sizes="
-                (min-width: 1200px) 370px, 
-                (min-width: 768px) 450px, 
-                (min-width: 480px) 418px, 100vw
-                "
-                src="./images/team/img1_450.jpg"
+                src="./images/team/barber-1.jpg"
                 alt="John Smith extreme barber"
-                width="450"
+                width="370"
                 height="346"
-                loading="lazy"
               />
               <div class="team-wrapper">
                 <p class="team-name">John Smith</p>
-                <p class="team-post">Extreme Barber</p>
+                <p class="description team-post">Extreme Barber</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
                     <a
@@ -425,28 +337,14 @@
             <li class="team-item card-set-item">
               <img
                 class="team-avatar"
-                srcset="
-                  ./images/team/img2_370.jpg 370w,
-                  ./images/team/img2_418.jpg 418w,
-                  ./images/team/img2_450.jpg 450w,
-                  ./images/team/img2_740.jpg 740w,
-                  ./images/team/img2_836.jpg 836w,
-                  ./images/team/img2_900.jpg 900w
-                "
-                sizes="
-                (min-width: 1200px) 370px, 
-                (min-width: 768px) 450px, 
-                (min-width: 480px) 418px, 100vw
-                "
-                src="./images/team/img2_450.jpg"
+                src="./images/team/barber-2.jpg"
                 alt="Michele Doe extreme barber"
-                width="450"
+                width="370"
                 height="346"
-                loading="lazy"
               />
               <div class="team-wrapper">
                 <p class="team-name">Michele Doe</p>
-                <p class="team-post">Extreme Barber</p>
+                <p class="description team-post">Extreme Barber</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
                     <a
@@ -507,28 +405,14 @@
             <li class="team-item card-set-item">
               <img
                 class="team-avatar"
-                srcset="
-                  ./images/team/img3_370.jpg 370w,
-                  ./images/team/img3_418.jpg 418w,
-                  ./images/team/img3_450.jpg 450w,
-                  ./images/team/img3_740.jpg 740w,
-                  ./images/team/img3_836.jpg 836w,
-                  ./images/team/img3_900.jpg 900w
-                "
-                sizes="
-                (min-width: 1200px) 370px, 
-                (min-width: 768px) 450px, 
-                (min-width: 480px) 418px, 100vw
-                "
-                src="./images/team/img3_450.jpg"
+                src="./images/team/barber-3.jpg"
                 alt="Alan Black extreme barber"
-                width="450"
+                width="370"
                 height="346"
-                loading="lazy"
               />
               <div class="team-wrapper">
                 <p class="team-name">Alan Black</p>
-                <p class="team-post">Extreme Barber</p>
+                <p class="description team-post">Extreme Barber</p>
                 <ul class="team-social-list list">
                   <li class="team-social-item">
                     <a
@@ -590,278 +474,171 @@
       </section>
 
       <!-- Gallery section -->
-      <section class="gallery">
+      <section class="gallery section">
         <div class="container">
           <p class="uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="hidden-title">Our gallery</h2>
           <ul class="gallery-list card-set list">
             <li class="card-set-item">
-              <picture>
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="
-                    ./images/gallery/photo-1_desk@1x.jpg 1x,
-                    ./images/gallery/photo-1_desk@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    ./images/gallery/photo-1_tab@1x.jpg 1x,
-                    ./images/gallery/photo-1_tab@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(max-width: 767px)"
-                  srcset="
-                    ./images/gallery/photo-1_mob@1x.jpg 1x,
-                    ./images/gallery/photo-1_mob@2x.jpg 2x
-                  "
-                />
-                <img
-                  class="gallery-img"
-                  src="./images/gallery/photo-1_mob@1x.jpg"
-                  alt="hairdresser doing a haircut"
-                  width="418"
-                  height="360"
-                  loading="lazy"
-                />
-              </picture>
+              <img
+                src="./images/gallery/photo-1.jpg"
+                alt="hairdresser doing a haircut"
+                width="270"
+                height="360"
+              />
             </li>
             <li class="card-set-item">
-              <picture>
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="
-                    ./images/gallery/photo-2_desk@1x.jpg 1x,
-                    ./images/gallery/photo-2_desk@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    ./images/gallery/photo-2_tab@1x.jpg 1x,
-                    ./images/gallery/photo-2_tab@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(max-width: 767px)"
-                  srcset="
-                    ./images/gallery/photo-2_mob@1x.jpg 1x,
-                    ./images/gallery/photo-2_mob@2x.jpg 2x
-                  "
-                />
-                <img
-                  class="gallery-img"
-                  src="./images/gallery/photo-2_mob@1x.jpg"
-                  alt="barber doing beard trim"
-                  width="418"
-                  height="360"
-                  loading="lazy"
-                />
-              </picture>
+              <img
+                src="./images/gallery/photo-2.jpg"
+                alt="barber doing beard trim"
+                width="270"
+                height="360"
+              />
             </li>
             <li class="card-set-item">
-              <picture>
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="
-                    ./images/gallery/photo-3_desk@1x.jpg 1x,
-                    ./images/gallery/photo-3_desk@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    ./images/gallery/photo-3_tab@1x.jpg 1x,
-                    ./images/gallery/photo-3_tab@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(max-width: 767px)"
-                  srcset="
-                    ./images/gallery/photo-3_mob@1x.jpg 1x,
-                    ./images/gallery/photo-3_mob@2x.jpg 2x
-                  "
-                />
-                <img
-                  class="gallery-img"
-                  src="./images/gallery/photo-3_mob@1x.jpg"
-                  alt="hairdresser taking care of face"
-                  width="418"
-                  height="360"
-                  loading="lazy"
-                />
-              </picture>
+              <img
+                src="./images/gallery/photo-3.jpg"
+                alt="hairdresser taking care of face"
+                width="270"
+                height="360"
+              />
             </li>
             <li class="card-set-item">
-              <picture>
-                <source
-                  media="(min-width: 1200px)"
-                  srcset="
-                    ./images/gallery/photo-4_desk@1x.jpg 1x,
-                    ./images/gallery/photo-4_desk@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
-                    ./images/gallery/photo-4_tab@1x.jpg 1x,
-                    ./images/gallery/photo-4_tab@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(max-width: 767px)"
-                  srcset="
-                    ./images/gallery/photo-4_mob@1x.jpg 1x,
-                    ./images/gallery/photo-4_mob@2x.jpg 2x
-                  "
-                />
-                <img
-                  class="gallery-img"
-                  src="./images/gallery/photo-4_mob@1x.jpg"
-                  alt="hairdresser doing neck haircut"
-                  width="418"
-                  height="360"
-                  loading="lazy"
-                />
-              </picture>
+              <img
+                src="./images/gallery/photo-4.jpg"
+                alt="hairdresser doing neck haircut"
+                width="270"
+                height="360"
+              />
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- Contacts section -->
-      <div class="wrapper-connection">
-        <div class="wrapper-booking">
-          <section class="booking-section booking">
-            <div class="booking-container container">
-              <h2 class="title title-white">Online-booking</h2>
+      <!-- Booking and Contact section -->
+      <div class="wrapper">
+        <div class="wrapper-container container">
+          <!-- Booking section -->
+          <section class="booking section">
+            <h2 class="title title-white">Online-booking</h2>
 
-              <form
-                class="booking-form"
-                name="booking_form"
-                novalidate
-                autocomplete="off"
-              >
-                <div class="booking-form-group">
-                  <label class="booking-form-field">
-                    <input
-                      class="booking-form-input"
-                      type="text"
-                      name="user_name"
-                      placeholder="Antony Black"
-                      minlength="3"
-                      required
-                    />
-                    <span class="booking-form-label">Name*</span>
-                    <span class="warning-msg"
-                      >Must include minimum 3 charecters</span
-                    >
-                    <svg class="info-icons" width="16" height="16">
-                      <use
-                        class="warning-icon"
-                        href="./images/icons.svg#icon-warning"
-                      ></use>
-                      <use
-                        class="success-icon"
-                        href="./images/icons.svg#icon-success"
-                      ></use>
-                    </svg>
-                  </label>
-
-                  <label class="booking-form-field">
-                    <input
-                      class="booking-form-input"
-                      type="tel"
-                      name="user_phohe"
-                      id="user-phone"
-                      minlength="19"
-                      placeholder=" "
-                      required
-                    />
-                    <span class="booking-form-label">Phone*</span>
-                  </label>
-                </div>
-
-                <label class="booking-form-massage">
-                  <textarea
-                    class="booking-form-textarea"
-                    name="user_message"
-                    rows="5"
-                    placeholder="&nbsp;"
-                  ></textarea>
-                  <span class="booking-form-label">Message</span>
+            <!-- Form booking -->
+            <form
+              class="booking-form"
+              name="booking_form"
+              novalidate
+              autocomplete="off"
+            >
+              <div class="booking-form-group">
+                <label class="booking-form-field">
+                  <input
+                    class="booking-form-input"
+                    type="text"
+                    name="user_name"
+                    placeholder="Antony Black"
+                    minlength="3"
+                    required
+                  />
+                  <span class="booking-form-label">Name*</span>
+                  <span class="warning-msg"
+                    >Must include minimum 3 charecters</span
+                  >
+                  <svg class="info-icons" width="16" height="16">
+                    <use
+                      class="warning-icon"
+                      href="./images/icons.svg#icon-warning"
+                    ></use>
+                    <use
+                      class="success-icon"
+                      href="./images/icons.svg#icon-success"
+                    ></use>
+                  </svg>
                 </label>
 
-                <button class="btn-booking btn btn-dark" type="submit">
-                  Send
-                </button>
-              </form>
-            </div>
+                <label class="booking-form-field">
+                  <input
+                    class="booking-form-input"
+                    type="tel"
+                    name="user_phohe"
+                    id="user-phone"
+                    minlength="19"
+                    placeholder=" "
+                    required
+                  />
+                  <span class="booking-form-label">Phone*</span>
+                </label>
+              </div>
+
+              <label class="booking-form-massage">
+                <textarea
+                  class="booking-form-textarea"
+                  name="user_message"
+                  rows="5"
+                  placeholder="&nbsp;"
+                ></textarea>
+                <span class="booking-form-label">Message</span>
+              </label>
+
+              <button class="txt btn btn-dark" type="submit">Send</button>
+            </form>
+            <!-- <button class="txt btn btn-dark" type="submit">send</button> -->
           </section>
-        </div>
 
-        <div class="wrapper-contacts">
-          <section class="contacts-section contacts" id="contacts">
-            <div class="contacts-container container">
-              <div class="address-wrapper">
-                <h2 class="title-white title">Contacts</h2>
-                <address class="contacts-block">
-                  <ul class="list">
-                    <li class="contacts-item">
-                      <a
-                        class="contacts-link location-link link"
-                        href="https://goo.gl/maps/XnrUCvhqgfmbvUwt5"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <svg class="contacts-icon" width="24" height="24">
-                          <use href="./images/icons.svg#icon-map"></use>
-                        </svg>
-                        st. Vasilkovaya, 7A Kiev, 08132</a
-                      >
-                    </li>
-                    <li class="contacts-item">
-                      <a class="contacts-link link" href="tel:+380441111111">
-                        <svg class="contacts-icon" width="24" height="24">
-                          <use href="./images/icons.svg#icon-phone"></use>
-                        </svg>
-                        +38 044 111 11 11
-                      </a>
-                    </li>
-                    <li class="contacts-item">
-                      <a
-                        class="contacts-link mail-link"
-                        href="mailto:barbershop@email.com"
-                      >
-                        <svg class="contacts-icon" width="24" height="24">
-                          <use href="./images/icons.svg#icon-mail"></use>
-                        </svg>
-                        barbershop@email.com
-                      </a>
-                    </li>
-                  </ul>
-                </address>
-              </div>
-
-              <div class="schedule-wrapper">
-                <p class="uppertitle schedule-uppertitle">Working hours</p>
-                <p class="schedule-description">
-                  Every day from <time datetime="09:00">9:00</time> to
-                  <time datetime="22:00">22:00</time>
-                </p>
-              </div>
-            </div>
+          <!-- Contact section -->
+          <section class="contact section" id="contact">
+            <h2 class="title title-white">Contacts</h2>
+            <address class="contact-block">
+              <ul class="list">
+                <li class="contact-item">
+                  <a
+                    class="contact-link location-link link"
+                    href="https://goo.gl/maps/XnrUCvhqgfmbvUwt5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-map"></use>
+                    </svg>
+                    st. Vasilkovaya, 7A <br />
+                    Kiev, 08132</a
+                  >
+                </li>
+                <li class="contact-item">
+                  <a class="contact-link link" href="tel:+380441111111">
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                    +38 044 111 11 11
+                  </a>
+                </li>
+                <li class="contact-item">
+                  <a
+                    class="contact-link mail-link"
+                    href="mailto:barbershop@email.com"
+                  >
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-mail"></use>
+                    </svg>
+                    barbershop@email.com
+                  </a>
+                </li>
+              </ul>
+            </address>
+            <p class="uppertitle schedule-uppertitle">Working hours</p>
+            <p class="schedule-description">
+              Every day from <time datetime="09:00">9:00</time> to
+              <time datetime="22:00">22:00</time>
+            </p>
           </section>
         </div>
       </div>
     </main>
 
     <!-- Footer section -->
-    <footer class="footer">
-      <div class="footer-container container">
-        <ul class="footer-media footer-list list">
+    <footer class="footer section">
+      <div class="footer-conteiner container">
+        <p class="media-link footer-desc">&#169; Copyright 2020</p>
+        <ul class="footer-list list">
           <li class="footer-item">
             <a
               class="media-link link"
@@ -881,7 +658,6 @@
             >
           </li>
         </ul>
-        <p class="media-link footer-desc">&#169; Copyright 2020</p>
       </div>
     </footer>
 
@@ -913,7 +689,6 @@
               <use href="./images/icons.svg#user-icon"></use>
             </svg>
           </div>
-
           <!-- Второй вариант записи input внутри label
           <label for="">
             <span>Name</span>
@@ -1006,107 +781,10 @@
       </div>
     </div>
 
-    <!----------------- Mobile-menu----------------->
-    <div class="menu-container js-menu-container" id="mobile-menu">
-      <!-- <button class="menu-toggle js-close-menu">
-        <svg class="" width="20" height="20">
-          <use href="./images/icons.svg#icon-close"></use>
-        </svg>
-      </button> -->
-
-      <div class="mobile-content">
-        <button class="menu-toggle js-close-menu">
-          <svg class="" width="20" height="20">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
-
-        <ul class="mobile-menu">
-          <li class="mobile-item">
-            <a class="mobile-link link current" href="#about">About</a>
-          </li>
-          <li class="mobile-item">
-            <a class="mobile-link link" href="#price">Services and prices</a>
-          </li>
-          <li class="mobile-item">
-            <a class="mobile-link link" href="#team">Barbers</a>
-          </li>
-          <li class="mobile-item">
-            <a class="mobile-link link" href="#contact">Contacts</a>
-          </li>
-        </ul>
-
-        <!-- <ul class="mobile-menu">
-        <li class="mobile-item">
-          <a class="link" href="#about">About</a>
-        </li>
-        <li class="mobile-item">
-          <a class="link" href="#price">Services and prices</a>
-        </li>
-        <li class="mobile-item">
-          <a class="link" href="#team">Barbers</a>
-        </li>
-        <li class="mobile-item">
-          <a class="link" href="#contact">Contacts</a>
-        </li>
-      </ul> -->
-
-        <div class="mobile-wrapper">
-          <a class="mobile-contact link" href="tel:+380441111111"
-            >+38 044 111 11 11</a
-          >
-          <button class="mobile-menu-btn btn txt" type="button" data-modal-open>
-            Online-booking
-          </button>
-        </div>
-
-        <ul class="mobile-media mobile-media-list list">
-          <li class="mobile-media-item">
-            <a
-              class="media-link link"
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Instagram</a
-            >
-          </li>
-          <li class="mobile-media-item">
-            <a
-              class="media-link link"
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Youtube</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ========== SCRIPTS ========== -->
-
-    <!-- Библиотека (jsdelivr) Ярослав - Mobile-menu 
-      - для мобильного меню(блокировка скролла когда открываем мобильное меню, чтоб небыло прокрутки сайта при открытом мобильном меню) -->
-    <script src="https://cdn.jsdelivr.net/npm/body-scroll-lock@4.0.0-beta.0/lib/bodyScrollLock.min.js"></script>
-
-    <!-- Библиотека (body-scroll-lock) Репета - Mobile-menu
-      -  Из файла Mobile-menu
-      https://github.com/goitacademy/mobile-menu-workshop/blob/main/index.html
-
-      - для мобильного меню (Библиотека-body-scroll-lock - блокировка скролла когда открываем мобильное меню, чтоб небыло прокрутки сайта при открытом мобильном меню).
-      -----
-      <script
-        defer
-        src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-        crossorigin="anonymous"
-      ></script> -->
-
+    <!-- SCRIPTS -->
     <!-- Скрипт для Header (чтоб был прозрачный) -->
     <script src="./js/header.js"></script>
     <!-- Скрипт для Modal (для модального окна) -->
     <script src="./js/modal.js"></script>
-    <!-- Скрипт для Mobile-menu (для мобильного меню) -->
-    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
